@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body, html {
+    background-color: #ededed;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blocHeader{
+    display: flex;
+    justify-content: center;
+    height: 2%;
+    padding-bottom: 0.3rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 1rem;
+    border-bottom: 3px solid #7EABE4;
+}
+
+a {
+    --color: #7EABE4;
+    font-family: inherit;
+    display: inline-block;
+    text-align: center;
+    width: 8em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 19px;
+    border-radius: 15px;
+    font-weight: 500;
+    color: var(--color);
+    align-content: center;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+a:hover {
+    color: white;
+}
+
+a:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+a:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+a:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+}
+
+.blocPresentation{
+    width: 100vw;
+    background-image: url(../img/background.png);
+}
