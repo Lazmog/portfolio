@@ -1,0 +1,108 @@
+.containerContact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    padding: 1rem;
+    background: url("../img/background.png");
+    border-radius: 10px;
+    box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -webkit-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -moz-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    animation: bounce 2s infinite;
+}
+
+.containerContact:focus-within{
+    animation: none;
+}
+
+.formContact{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1.5rem;
+    padding-left: 1rem;
+}
+
+.formContact input{
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-indent: 10px;
+    outline: none;
+}
+
+.formContact input::placeholder, .formContact input:read-write, .formContact textarea::placeholder, .formContact textarea:read-write{
+    color: white;
+    font-weight: bold;
+}
+
+.formContact input:focus, .formContact textarea:focus{
+    backdrop-filter: blur(100px);
+}
+
+.formContact textarea{
+    height: 150px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+.formContact button{
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    outline: none;
+    color: #7EABE4;
+    cursor: pointer;
+    border: 2px solid #7EABE4;
+}
+
+.formContact button:hover{
+    background: #7EABE4;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.infoContact{
+    color: white;
+    filter: drop-shadow(0px 1px 3px rgba(104, 104, 104, 0.7));
+    font-weight: 200;
+
+}
+
+.infoEmail{
+    color: white;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.titrePage{
+    background: url("../img/background.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -webkit-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -moz-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    color: white;
+    margin: 0 auto;
+}
+
+.titrePage span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}

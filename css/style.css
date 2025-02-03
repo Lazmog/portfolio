@@ -6,11 +6,17 @@
 }
 
 body, html {
-    background-color: #ededed;
-    font-family: "Jaro", sans-serif;
+    font-family: "Roboto", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    background: #DAE7EEFF;
 }
 
 .blocHeader{
@@ -22,6 +28,7 @@ body, html {
 
 header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 60%;
     padding: 1rem;
@@ -48,7 +55,17 @@ a {
     align-content: center;
 }
 
-a:before {
+#logo{
+    color: #7EABE4;
+    font-family: "Jim Nightshade", serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    width: 5em;
+    height: 2em;
+}
+
+a:not(:first-child):before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -74,11 +91,105 @@ a:hover:before {
 }
 
 a:active:before {
-    background: #3a0ca3;
+    background: rgba(18, 64, 133, 0.75);
     transition: background 0s;
 }
 
-.blocPresentation{
-    width: 100vw;
-    background-image: url(../img/background.png);
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 3rem;
+}
+
+.containerPresentationPersonnel{
+    display: flex;
+    background-image: url("../img/background.png");
+    padding: 2rem;
+    border-radius: 80px;
+    overflow: hidden;
+    width: 50%;
+    box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -webkit-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -moz-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.containerPresentationPersonnel img{
+    width: 250px;
+}
+
+.blocPresentationPersonnel{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 500px;
+    word-wrap: break-word; /* Permet de couper les mots trop longs */
+    overflow: hidden; /* Empêche le débordement de contenu */
+    text-overflow: ellipsis; /* Ajoute "..." pour indiquer le débordement */
+    padding: 1rem; /* Ajoute un peu d'espace à l'intérieur */
+    background: none;
+    color: white;
+    filter: drop-shadow(0px 1px 3px rgba(104, 104, 104, 0.7));
+}
+
+.blocPresentationPersonnel h1{
+    color: white;
+}
+
+.blocPresentationPersonnel p{
+    word-break: break-word;
+    hyphens: auto;
+}
+
+#nomPrenom{
+    color: #b5cff3;
+    filter: drop-shadow(0px 1px 3px rgb(0, 0, 0));
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background: url("../img/background.png");
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto 2rem auto;
+    color: white;
+    box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -webkit-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+    -moz-box-shadow: -1px 1px 8px 10px rgba(57,126,229,0.75);
+}
+
+footer p{
+    filter: drop-shadow(0px 1px 3px rgba(104, 104, 104, 0.7));
+    font-weight: 600;
+}
+
+
+
+.container{
+    padding: 2rem;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+.blocPresentationPersonnel h1{
+    color: black;
+}
+
+.blocPresentationPersonnel span{
+    color: red;
 }
